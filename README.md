@@ -70,7 +70,11 @@ To override configuration file, run `php artisan vendor:publish --tag=config` co
 
 If you want to make changes to the views, you can publish them by running `php artisan vendor:publish --tag=views` in the root of your project.
 
-By running this command the files that override the default views will be generated and stored to the `/resources/views/contact` directory. Now you can edit them as you wish and make then fit your needs. By default, available variables for your views are:
+By running this command the files that override the default views will be generated and stored to the `/resources/views/contact` directory. Now you can edit them as you wish and make then fit your needs. By default, available variables for your email templates are:
+* `$name` name of the sender
+* `$email` email of the sender
+* `$subject` email subject
+* `$content` content of email
 
 ### Overriding mailables
 

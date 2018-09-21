@@ -38,7 +38,12 @@ class Contact extends Mailable
     public function build()
     {
         $m = $this->view('contact::emails.contact')
-          ->with(['content' => $this->content])
+          ->with([
+            'subject' => $this->subject,
+            'content' => $this->content,
+            'name' => $this->name,
+            'email' => $this->email
+          ])
           ->subject($this->subject)
           ->replyTo($this->email, $this->name);
 

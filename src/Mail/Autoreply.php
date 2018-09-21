@@ -17,9 +17,16 @@ class Autoreply extends Mailable
      * @return void
      */
     protected $name;
-    public function __construct($name)
+    protected $email;
+    protected $content;
+    protected $attachment;
+    public function __construct($name, $email, $subject, $content, $attachment = null)
     {
         $this->name = $name;
+        $this->email = $email;
+        $this->subject = $subject;
+        $this->content = $content;
+        $this->attachment = $attachment;
     }
 
     /**
@@ -30,7 +37,12 @@ class Autoreply extends Mailable
     public function build()
     {
         $m = $this->view('contact::emails.autoreply')
-          ->with(['name' => $this->name]);
+          ->with([
+            'subject' => $this->subject,
+            'content' => $this->content,
+            'name' => $this->name,
+            'email' => $this->email
+          ])
         return $m;
     }
 }

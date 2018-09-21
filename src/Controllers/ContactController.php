@@ -30,7 +30,7 @@ class ContactController extends Controller
 
     Mail::to($email, $name)->queue(new Contact($name, $email, $subject, $content, $attachment));
 
-    if(config('contact.autoreply')) Mail::to($email, $name)->queue(new Autoreply($name));
+    if(config('contact.autoreply')) Mail::to($email, $name)->queue(new Autoreply($name, $email, $subject, $content, $attachment));
 
     return redirect()->route('show_contact_form')->with('success', 'Your message was sent successfully!!');
   }

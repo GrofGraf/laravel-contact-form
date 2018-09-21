@@ -1,0 +1,30 @@
+{
+    "name": "grofgraf/laravel-contact-form",
+    "version": "1.0.0",
+    "type": "library",
+    "description": "Contact form for Laravel",
+    "keywords": [
+      "grofgraf",
+      "laravel",
+      "contact",
+      "form",
+      "contactform",
+      "contact-form",
+      "laravel-contact-form"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "GrofGraf",
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/support": ">=5.6.0",
+    },
+    "autoload": {
+      "psr-4": {
+          "GrofGraf\\LaravelContact\\": "src"
+      }
+    }
+}

@@ -24,7 +24,7 @@
     },
     "autoload": {
       "psr-4": {
-          "GrofGraf\\LaravelContact\\": "src"
+          "GrofGraf\\LaravelContactForm\\": "src"
       }
     }
 }

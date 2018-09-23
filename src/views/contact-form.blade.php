@@ -8,6 +8,21 @@
       <h1>Cotact Form</h1>
       <div class="row">
         <div class="col-md-6">
+
+          @if ($errors->any())
+            <div class="alert alert-danger" role="alert">
+              <h4 class="alert-heading">Message not sent!</h4>
+              @foreach($errors->all() as $error)
+                <div>{!! $error !!}</div>
+              @endforeach
+            </div>
+          @elseif(session()->has('success'))
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">Well done!</h4>
+              <p>{!! session()->get('success') !!}</p>
+            </div>
+          @endif
+
           <form action="{!! route('post_contact_form') !!}" method="post">
             {{ csrf_field() }}
             <div class="form-group">

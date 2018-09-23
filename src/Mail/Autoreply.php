@@ -42,7 +42,7 @@ class Autoreply extends Mailable
             'content' => $this->content,
             'name' => $this->name,
             'email' => $this->email
-          ])
+          ]);
         return $m;
     }
 }

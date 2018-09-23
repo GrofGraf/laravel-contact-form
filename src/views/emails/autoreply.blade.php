@@ -6,7 +6,13 @@
     <h1>Dear {!! $name !!}</h1>
     <p>
       Your contact was received.
-      We will get back at you as soon as possible.
+    </p>
+    <p>
+      We will get back to you as soon as possible.
+    </p>
+    <p>
+      Your message:
+      <i>{!! nl2br($content) !!}</i>
     </p>
   </body>
 </html>

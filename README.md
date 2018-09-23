@@ -63,7 +63,7 @@ To allow all mime types for attachment, set the value to  `'attachment_mimetypes
 ### Overriding configurations
 
 To override configuration file, run `php artisan vendor:publish --tag=config` command, that will create `config/contact.php` file. By editing this file you can choose between different [configuration options]('https://github.com/GrofGraf/laravel-contact-form/tree/master/src/config/contact.php'), like enabling or disabling autoreply and human verification, adding addresses to mail carbon copy (cc), or choosing attachment mime types.
-> If you don't want to publish configuration file, you can override some options by assigning variables in `.env` file
+> If you don't want to publish configuration file, you can override some options by assigning variables in `.env` file.
 
 
 ### Overriding views

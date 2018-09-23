@@ -20,7 +20,7 @@ return [
       if you dont assign sitekey, no verification will be performed
       if you assign only sitekey, only client side verification will be performed
     */
-    'sitekey' => env('RECAPTCHA_SITEKEY', null)
+    'sitekey' => env('RECAPTCHA_SITEKEY', null),
 
     /*
     for server side verification you must assign sitekey and secret key
